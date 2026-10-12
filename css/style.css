@@ -132,128 +132,51 @@ body.gelap #pesan-pendaftaran {
 /* ===== BAGIAN MAHASISWA 3 (PROFIL DAN KEGIATAN) ===== */
 
 /* ===== BAGIAN MAHASISWA 4 (PENDAFTARAN) ===== */
-.form-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
 .form-pendaftaran {
-  width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
-  background-color: var(--card-bg, #ffffff);
-  border: 1px solid var(--border-color, #cccccc);
+  padding: 25px;
+  background: white;
   border-radius: 10px;
-  box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.08));
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.form-group {
-  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .form-pendaftaran label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: var(--text-color, #333333);
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form-pendaftaran input,
 .form-pendaftaran select,
 .form-pendaftaran textarea {
   width: 100%;
-  padding: 11px 12px;
-  border: 1px solid var(--border-color, #ccc);
-  border-radius: 6px;
-  background-color: var(--card-bg, #ffffff);
-  color: var(--text-color, #333333);
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font: inherit;
-  outline: none;
-  transition: border-color 0.2s, background-color 0.3s ease, color 0.3s ease;
-}
-
-.form-pendaftaran input:focus,
-.form-pendaftaran select:focus,
-.form-pendaftaran textarea:focus {
-  border-color: var(--primary-color, #0056b3);
 }
 
 .form-pendaftaran textarea {
   resize: vertical;
 }
 
-/* Tombol / Button Group */
-.button-group {
-  display: flex;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.btn {
-  padding: 11px 22px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.btn-primary {
-  background-color: var(--primary-color, #0056b3);
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover, #004085);
-}
-
-.btn-secondary {
-  background-color: #64748b;
-  color: #ffffff;
-}
-
-.btn-secondary:hover {
-  background-color: #475569;
-}
-
-/* Pesan Notifikasi Validasi */
-.pesan-box {
+.form-pendaftaran button {
   margin-top: 18px;
-  padding: 12px;
-  border-radius: 6px;
-  font-weight: 600;
-  display: none;
 }
 
-.pesan-box.sukses {
-  display: block;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+.form-pendaftaran .tombol-reset {
+  background: #64748b;
 }
 
-.pesan-box.gagal {
-  display: block;
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+#pesan-pendaftaran {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-/* Penyesuaian Tampilan HP */
 @media (max-width: 600px) {
   .form-pendaftaran {
-    padding: 20px;
-  }
-
-  .button-group {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
+    padding: 18px;
   }
 }
