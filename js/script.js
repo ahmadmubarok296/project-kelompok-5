@@ -24,36 +24,12 @@ if (formPendaftaran) {
   formPendaftaran.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Ambil nilai dari input form
-    const nama = document.getElementById("nama").value.trim();
-    const nim = document.getElementById("nim").value.trim();
-    const prodi = document.getElementById("prodi").value.trim();
+    const nama = document.getElementById("nama").value;
     const pilihanUKM = document.getElementById("pilihan-ukm").value;
-    const pengalaman = document.getElementById("pengalaman").value;
-    const alasan = document.getElementById("alasan").value.trim();
     const pesan = document.getElementById("pesan-pendaftaran");
 
-    // Validasi sederhana: pastikan semua field terisi
-    if (!nama || !nim || !prodi || !pilihanUKM || !pengalaman || !alasan) {
-      pesan.className = "pesan-box gagal";
-      pesan.textContent = "Mohon lengkapi semua data dalam formulir pendaftaran!";
-      return;
-    }
-
-    // Tampilkan pesan sukses dan ubah tampilan style kotak pesan
-    pesan.className = "pesan-box sukses";
     pesan.textContent = "Terima kasih, " + nama + "! Pilihan minatmu adalah " + pilihanUKM + ". Formulir simulasi berhasil diproses.";
 
-    // Reset isi form setelah berhasil
     formPendaftaran.reset();
-  });
-
-  // Hapus/sembunyikan pesan saat tombol reset diklik
-  formPendaftaran.addEventListener("reset", function () {
-    const pesan = document.getElementById("pesan-pendaftaran");
-    if (pesan) {
-      pesan.className = "pesan-box";
-      pesan.textContent = "";
-    }
   });
 }
