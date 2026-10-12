@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran UKM PNC</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2>UKM PNC</h2>
+      <div class="menu">
+        <a href="beranda.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="pendaftaran.html">Pendaftaran</a>
+      </div>
+      <button id="tombol-tema">Mode Gelap</button>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <h1>Formulir Minat UKM</h1>
+        <p>
+          Ceritakan minatmu agar kamu dapat menentukan bidang kegiatan yang
+          ingin dipelajari lebih lanjut.
+        </p>
+      </section>
+
+      <form id="form-pendaftaran" class="form-pendaftaran">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Contoh: Ifat Febriansyah" required />
+
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" placeholder="Masukkan NIM" required />
+
+        <label for="prodi">Program Studi</label>
+        <input type="text" id="prodi" placeholder="Contoh: D3 Teknik Informatika" required />
+
+        <label for="pilihan-ukm">Bidang yang Diminati</label>
+        <select id="pilihan-ukm" required>
+          <option value="">-- Pilih bidang --</option>
+          <option value="Logic Robotic PNC">ROBOTIC</option>
+          <option value="PROTIC">PROTIC</option>
+          <option value="Medicom">MEDICOM</option>
+          <option value="Kewirausahaan">KEWIRAUSAHAAN</option>
+          <option value="Kewirausahaan">KOMAPALA</option>
+          <option value="Kewirausahaan">MAJLIS AL MUSTAQIM</option>
+        </select>
+
+        <label for="pengalaman">Pengalaman Sebelumnya</label>
+        <select id="pengalaman" required>
+          <option value="">-- Pilih jawaban --</option>
+          <option value="Pemula">Belum punya pengalaman</option>
+          <option value="Pernah belajar">Pernah belajar sendiri</option>
+          <option value="Pernah ikut kegiatan">
+            Pernah ikut kegiatan serupa
+          </option>
+        </select>
+
+        <label for="alasan">Alasan Memilih Bidang Ini</label>
+        <textarea id="alasan" rows="4" placeholder="Ceritakan minat dan tujuanmu..." required ></textarea>
+
+        <button type="submit">Kirim Formulir</button>
+        <button type="reset" class="tombol-reset">Reset</button>
+
+        <div id="pesan-pendaftaran" aria-live="polite"></div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Informasi UKM Politeknik Negeri Cilacap</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
