@@ -3,73 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pendaftaran UKM PNC</title>
+    <title>Pendaftaran UKM - Politeknik Negeri Cilacap</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Navbar Navigation -->
     <nav class="navbar">
-      <h2>UKM PNC</h2>
-      <div class="menu">
-        <a href="beranda.html">Beranda</a>
-        <a href="profil.html">Profil</a>
-        <a href="kegiatan.html">Kegiatan</a>
-        <a href="pendaftaran.html">Pendaftaran</a>
+      <div class="container nav-container">
+        <a href="beranda.html" class="logo">UKM PNC</a>
+        <div class="menu">
+          <a href="beranda.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="pendaftaran.html" class="active">Pendaftaran</a>
+        </div>
+        <button id="tombol-tema" type="button">Mode Gelap</button>
       </div>
-      <button id="tombol-tema">Mode Gelap</button>
     </nav>
 
-    <main>
+    <!-- Main Content -->
+    <main class="container">
       <section class="hero">
-        <h1>Formulir Minat UKM</h1>
+        <h1>Formulir Pendaftaran UKM</h1>
         <p>
-          Ceritakan minatmu agar kamu dapat menentukan bidang kegiatan yang
-          ingin dipelajari lebih lanjut.
+          Bergabunglah bersama kami untuk mengasah potensi, minat, dan bakatmu di lingkungan kampus Politeknik Negeri Cilacap.
         </p>
       </section>
 
-      <form id="form-pendaftaran" class="form-pendaftaran">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" placeholder="Contoh: Ifat Febriansyah" required />
+      <!-- Section Form Card -->
+      <section class="form-section">
+        <form id="form-pendaftaran" class="form-pendaftaran" novalidate>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input
+              type="text"
+              id="nama"
+              placeholder="Contoh: Ifat Febriansyah"
+              required
+            />
+          </div>
 
-        <label for="nim">NIM</label>
-        <input type="text" id="nim" placeholder="Masukkan NIM" required />
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input
+              type="text"
+              id="nim"
+              placeholder="Contoh: 230102001"
+              required
+            />
+          </div>
 
-        <label for="prodi">Program Studi</label>
-        <input type="text" id="prodi" placeholder="Contoh: D3 Teknik Informatika" required />
+          <div class="form-group">
+            <label for="prodi">Program Studi</label>
+            <input
+              type="text"
+              id="prodi"
+              placeholder="Contoh: D3 Teknik Informatika"
+              required
+            />
+          </div>
 
-        <label for="pilihan-ukm">Bidang yang Diminati</label>
-        <select id="pilihan-ukm" required>
-          <option value="">-- Pilih bidang --</option>
-          <option value="Logic Robotic PNC">ROBOTIC</option>
-          <option value="PROTIC">PROTIC</option>
-          <option value="Medicom">MEDICOM</option>
-          <option value="Kewirausahaan">KEWIRAUSAHAAN</option>
-          <option value="Kewirausahaan">KOMAPALA</option>
-          <option value="Kewirausahaan">MAJLIS AL MUSTAQIM</option>
-        </select>
+          <div class="form-group">
+            <label for="pilihan-ukm">Bidang / UKM yang Diminati</label>
+            <select id="pilihan-ukm" required>
+              <option value="">-- Pilih UKM --</option>
+              <option value="Logic Robotic PNC">Logic Robotic PNC</option>
+              <option value="PROTIC">PROTIC (TI)</option>
+              <option value="Medicom">MEDICOM</option>
+              <option value="Kewirausahaan">Kewirausahaan</option>
+              <option value="KOMAPALA">KOMAPALA</option>
+              <option value="Majlis Al Mustaqim">Majlis Al Mustaqim</option>
+            </select>
+          </div>
 
-        <label for="pengalaman">Pengalaman Sebelumnya</label>
-        <select id="pengalaman" required>
-          <option value="">-- Pilih jawaban --</option>
-          <option value="Pemula">Belum punya pengalaman</option>
-          <option value="Pernah belajar">Pernah belajar sendiri</option>
-          <option value="Pernah ikut kegiatan">
-            Pernah ikut kegiatan serupa
-          </option>
-        </select>
+          <div class="form-group">
+            <label for="pengalaman">Pengalaman Sebelumnya</label>
+            <select id="pengalaman" required>
+              <option value="">-- Pilih Tingkat Pengalaman --</option>
+              <option value="Pemula">Belum punya pengalaman (Pemula)</option>
+              <option value="Pernah Belajar">Pernah belajar sendiri</option>
+              <option value="Pernah Ikut Kegiatan">Pernah ikut kegiatan/organisasi serupa</option>
+            </select>
+          </div>
 
-        <label for="alasan">Alasan Memilih Bidang Ini</label>
-        <textarea id="alasan" rows="4" placeholder="Ceritakan minat dan tujuanmu..." required ></textarea>
+          <div class="form-group">
+            <label for="alasan">Alasan Memilih Bidang Ini</label>
+            <textarea
+              id="alasan"
+              rows="4"
+              placeholder="Ceritakan motivasi, minat, dan tujuanmu bergabung..."
+              required
+            ></textarea>
+          </div>
 
-        <button type="submit">Kirim Formulir</button>
-        <button type="reset" class="tombol-reset">Reset</button>
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">Kirim Formulir</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
 
-        <div id="pesan-pendaftaran" aria-live="polite"></div>
-      </form>
+          <!-- Tempat pesan status kirim/validasi -->
+          <div id="pesan-pendaftaran" class="pesan-box" aria-live="polite"></div>
+        </form>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-      <p>&copy; 2026 Informasi UKM Politeknik Negeri Cilacap</p>
+      <div class="container footer-content">
+        <p>&copy; 2026 Informasi UKM Politeknik Negeri Cilacap. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
