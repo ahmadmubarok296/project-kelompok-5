@@ -130,5 +130,13 @@ body.gelap #pesan-pendaftaran {
 /* ===== BAGIAN MAHASISWA 2 (BERANDA) ===== */
 
 /* ===== BAGIAN MAHASISWA 3 (PROFIL DAN KEGIATAN) ===== */
+.judul {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.pengantar {
+  text-align: center;
+  margin-bottom: 25px;
+}
 /* ===== BAGIAN MAHASISWA 4 (PENDAFTARAN) ===== */
