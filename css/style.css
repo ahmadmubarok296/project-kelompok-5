@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f4f6fb;
+  line-height: 1.7;
+}
+
+/* ===== BAGIAN UMUM (KETUA) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 5%;
+  background: #176b87;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+button, .tombol {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #176b87;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+}
+
+button:hover,
+.tombol:hover {
+  background: #12546b;
+}
+
+.navbar button {
+  background: white;
+  color: #176b87;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  min-height: 65vh;
+  margin: 30px auto;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  color: white;
+  background: #176b87;
+}
+
+/* Mode gelap */
+body.gelap {
+  color: #f1f1f1;
+  background: #182127;
+}
+
+body.gelap .hero {
+  background: #263b45;
+}
+
+body.gelap .card,
+body.gelap .form-pendaftaran {
+  color: #f1f1f1;
+  background: #263238;
+}
+
+body.gelap .card h2,
+body.gelap .card h3 {
+  color: #8dd9f0;
+}
+
+body.gelap .form-pendaftaran input,
+body.gelap .form-pendaftaran select,
+body.gelap .form-pendaftaran textarea {
+  color: white;
+  background: #37474f;
+  border-color: #607d8b;
+}
+
+body.gelap #pesan-pendaftaran {
+  color: #8dd9f0;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  main {
+    width: 92%;
+    margin: 20px auto;
+  }
+}
+
+/* ===== BAGIAN MAHASISWA 2 (BERANDA) ===== */
+
+/* ===== BAGIAN MAHASISWA 3 (PROFIL DAN KEGIATAN) ===== */
+
+/* ===== BAGIAN MAHASISWA 4 (PENDAFTARAN) ===== */
